@@ -14,11 +14,15 @@ class Users extends Component {
   }
 
   render() {
-    const users = [...Array(10).keys].map(() => <User />)
+    const users = [...Array(10)].map(() => <User />)
     return (
       <Container>
         <Header>
-          <SearchBar placeholder="Search" onChange={this.handleChange} />
+          <SearchBar
+            classname="serachbar"
+            placeholder="Search"
+            onChange={this.handleChange}
+          />
         </Header>
         <UsersContainer>{users}</UsersContainer>
       </Container>
