@@ -6,6 +6,8 @@ import { ThemeProvider } from 'styled-components'
 import theme from './theme'
 import config from './config'
 import Home from './containers/Home/'
+import Users from './containers/Users/'
+import { Flex } from 'grid-styled'
 
 // creates new client
 const client = new ApolloClient({
@@ -18,11 +20,12 @@ class App extends Component {
       <Router>
         <ThemeProvider theme={theme}>
           <ApolloProvider client={client}>
-            <div className="App">
+            <Flex className="App">
               <Switch>
-                <Route path="/" component={Home} />
+                <Route exact path="/" component={Home} />
+                <Route path="/users" component={Users} />
               </Switch>
-            </div>
+            </Flex>
           </ApolloProvider>
         </ThemeProvider>
       </Router>
