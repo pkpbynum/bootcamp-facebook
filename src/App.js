@@ -5,6 +5,7 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import theme from './theme'
 import config from './config'
+import Navbar from './components/Navbar'
 import Home from './containers/Home/'
 import Users from './containers/Users/'
 import { Flex } from 'grid-styled'
@@ -20,7 +21,8 @@ class App extends Component {
       <Router>
         <ThemeProvider theme={theme}>
           <ApolloProvider client={client}>
-            <Flex className="App">
+            <Flex style={{ flexDirection: 'column' }} className="App">
+              <Navbar />
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/users" component={Users} />
