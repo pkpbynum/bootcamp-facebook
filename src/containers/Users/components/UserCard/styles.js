@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { Flex } from 'grid-styled'
+import { Link } from 'react-router-dom'
 
-export const Container = styled(Flex)`
+export const Container = styled(Link)`
+  display: flex;
   flex-direction: column;
   height: 150px;
   width: 150px;

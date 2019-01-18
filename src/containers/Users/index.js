@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Container, Header, SearchBar, UsersContainer, User } from './styles'
+import { Container, Header, SearchBar, UsersContainer } from './styles'
+import UserCard from './components/UserCard'
 
 class Users extends Component {
   constructor(props) {
@@ -14,7 +15,12 @@ class Users extends Component {
   }
 
   render() {
-    const users = [...Array(10)].map(() => <User />)
+    const users = [...Array(10)].map(() => (
+      <UserCard
+        image="https://static.stereogum.com/uploads/2018/01/GettyImages-889998292-1517445539-640x462.jpg"
+        name="Rivers Cuomo"
+      />
+    ))
     return (
       <Container>
         <Header>
