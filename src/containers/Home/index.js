@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
+import { Container } from './styles'
+import LoginModal from './components/LoginModal'
 
 class Home extends Component {
   render() {
-    return <div>DEV react-frontend-starter!</div>
+    return (
+      <Container>
+        <LoginModal />
+      </Container>
+    )
   }
 }
 
