@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { Flex } from "grid-styled"
+import styled from 'styled-components'
+import { Flex } from 'grid-styled'
 
 export const Container = styled(Flex)`
   width: 100vw;

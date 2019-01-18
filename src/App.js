@@ -8,6 +8,7 @@ import config from './config'
 import Navbar from './components/Navbar'
 import Home from './containers/Home/'
 import Users from './containers/Users/'
+import User from './containers/User'
 import { Flex } from 'grid-styled'
 
 // creates new client
@@ -25,7 +26,8 @@ class App extends Component {
               <Navbar />
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/users" component={Users} />
+                <Route exact path="/users" component={Users} />
+                <Route path="/user" component={User} />
               </Switch>
             </Flex>
           </ApolloProvider>
