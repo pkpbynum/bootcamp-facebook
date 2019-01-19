@@ -10,6 +10,9 @@ import Home from './containers/Home/'
 import Users from './containers/Users/'
 import User from './containers/User'
 import { Flex } from 'grid-styled'
+import { createBrowserHistory } from 'history'
+
+const customHistory = createBrowserHistory()
 
 // creates new client
 const client = new ApolloClient({
@@ -19,7 +22,7 @@ const client = new ApolloClient({
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={customHistory}>
         <ThemeProvider theme={theme}>
           <ApolloProvider client={client}>
             <Flex style={{ flexDirection: 'column' }} className="App">
